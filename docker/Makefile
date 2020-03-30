@@ -1,7 +1,11 @@
-IMAGE_NAME 					= qa-tracker
-CONTAINER_NAME				= c_${IMAGE_NAME}
+include .env
+
+IMAGE_NAME=${PROJECT_NAME}_app
+CONTAINER_NAME=${IMAGE_NAME}_1
 
 DOCKER 					= sudo docker
+DOCKER_COMPOSE 			= sudo docker-compose
+
 CONTAINERS_LIST 		= $(DOCKER) ps -a -q
 IMAGES_LIST 			= $(DOCKER) images -q
 UNTAGGED_IMAGES_LIST 	= $(DOCKER) images -f "dangling=true" -q
@@ -19,6 +23,17 @@ help:
 ##
 ## Tools
 ## -----
+
+start: ## Start the app
+start:
+	$(DOCKER_COMPOSE) up -d --remove-orphans
+
+stop: ## Stop the app
+stop:
+	$(DOCKER_COMPOSE) stop
+
+restart: ## Restart the app
+restart: stop start
 
 build: ## Build image
 build:

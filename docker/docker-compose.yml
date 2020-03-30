@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+    app:
+        build: .
+        image: "${PROJECT_NAME}_app"
+        container_name: "${PROJECT_NAME}_app_1"
+        env_file:
+            - .env
+    nginx:
+        image: nginx:1
+        container_name: "${PROJECT_NAME}_nginx_1"
+        env_file:
+            - .env
+        ports:
+            - "80:80"
+        links:
+            - app:app

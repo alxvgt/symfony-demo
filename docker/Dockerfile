@@ -10,5 +10,4 @@ ADD https://raw.githubusercontent.com/alxvgt/init-debian/master/init-composer.sh
 RUN chmod uga+x /usr/local/bin/init-composer.sh && bash /usr/local/bin/init-composer.sh
 
 ADD https://raw.githubusercontent.com/alxvgt/init-debian/master/init-symfony-cli.sh /usr/local/bin/
-RUN chmod uga+x /usr/local/bin/init-symfony-cli.sh && bash /usr/local/bin/init-symfony-cli.sh
-
+RUN chmod uga+x /usr/local/bin/init-symfony-cli.sh && bash /usr/local/bin/init-symfony-cli.sh && mv /root/.symfony/bin/symfony /usr/local/bin/symfony
