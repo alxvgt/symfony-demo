@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd-cpd>
+  <duplication lines="31" tokens="56">
+    <file path="/var/www/qa-tracker/app/src/Entity/Comment.php" line="99"/>
+    <file path="/var/www/qa-tracker/app/src/Entity/Post.php" line="158"/>
+    <codefragment>    public function getContent(): ?string
+    {
+        return $this-&gt;content;
+    }
+
+    public function setContent(string $content): void
+    {
+        $this-&gt;content = $content;
+    }
+
+    public function getPublishedAt(): \DateTime
+    {
+        return $this-&gt;publishedAt;
+    }
+
+    public function setPublishedAt(\DateTime $publishedAt): void
+    {
+        $this-&gt;publishedAt = $publishedAt;
+    }
+
+    public function getAuthor(): ?User
+    {
+        return $this-&gt;author;
+    }
+
+    public function setAuthor(User $author): void
+    {
+        $this-&gt;author = $author;
+    }
+
+    public function getPost(): ?Post
+</codefragment>
+  </duplication>
+</pmd-cpd>

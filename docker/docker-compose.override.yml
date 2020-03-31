@@ -5,7 +5,6 @@ services:
         working_dir: ${PROJECT_CONTAINER_PATH}
         volumes:
             - ../.:${PROJECT_CONTAINER_PATH}
-            - ../app/server/php/110-qa-tracker.ini:/usr/local/etc/php/conf.d/110-qa-tracker.ini
     nginx:
         volumes:
             - ../.:${PROJECT_CONTAINER_PATH}

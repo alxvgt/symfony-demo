@@ -10,19 +10,15 @@ CONTAINERS_LIST 		= $(DOCKER) ps -a -q
 IMAGES_LIST 			= $(DOCKER) images -q
 UNTAGGED_IMAGES_LIST 	= $(DOCKER) images -f "dangling=true" -q
 
-##
-## Project
-## -------
+##@ Project
 
 .DEFAULT_GOAL := help
-help: ## Show this help message
-help:
-	@grep -E '(^[a-zA-Z_-]+:.*?##.*$$)|(^##)' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[32m%-20s\033[0m %s\n", $$1, $$2}' | sed -e 's/\[32m##/[33m/'
-.PHONY: help
-
+help:  ## Display this help
+	@awk 'BEGIN {FS = ":.*##"; printf "\nUsage:\n  make \033[32m<target>\033[0m\n"} /^[a-zA-Z_-]+:.*?##/ { printf "  \033[32m%-20s\033[0m %s\n", $$1, $$2 } /^##@/ { printf "\n\033[33m%s\033[0m\n", substr($$0, 5) } ' $(MAKEFILE_LIST)
 ##
-## Tools
-## -----
+
+
+##@ Docker
 
 start: ## Start the app
 start:
@@ -63,4 +59,4 @@ images-list: ## List all images
 images-list:
 	$(DOCKER) images -a
 
-##
+##@
