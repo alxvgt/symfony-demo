@@ -141,9 +141,6 @@
     "ocramius/proxy-manager": {
         "version": "2.1.1"
     },
-    "paragonie/random_compat": {
-        "version": "v9.99.99"
-    },
     "php": {
         "version": "7.2.9"
     },
