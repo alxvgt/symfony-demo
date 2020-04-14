@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d6f0f58e6c1da7f449d1f9c59cc0ef2d",
+    "content-hash": "53aabeb441461afec378a0cb1f40194b",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -6009,6 +6009,58 @@
     ],
     "packages-dev": [
         {
+            "name": "alxvng/qatracker",
+            "version": "0.5.0.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/alxvgt/qatracker.git",
+                "reference": "04af9d28250a4883aec1d08396a398b62816cbf7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/alxvgt/qatracker/zipball/04af9d28250a4883aec1d08396a398b62816cbf7",
+                "reference": "04af9d28250a4883aec1d08396a398b62816cbf7",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-xml": "*",
+                "flow/jsonpath": "^0.5.0",
+                "goat1000/svggraph": "^3.5",
+                "php": ">=7.4",
+                "symfony/console": "^5.0",
+                "symfony/filesystem": "^5.0",
+                "symfony/finder": "^5.0",
+                "symfony/string": "^5.0",
+                "symfony/yaml": "^5.0",
+                "twig/twig": "^3.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^0.12.18",
+                "phpunit/phpunit": "^9.0",
+                "symfony/var-dumper": "^5.0"
+            },
+            "bin": [
+                "bin/qatracker"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "App\\": "src/",
+                    "App\\Tests\\": "tests/"
+                },
+                "files": [
+                    "Root.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "QATracker is a tool to collect, store and render quality assurance indicators.",
+            "time": "2020-04-09T06:41:43+00:00"
+        },
+        {
             "name": "composer/semver",
             "version": "1.5.1",
             "source": {
@@ -6309,6 +6361,47 @@
             "time": "2020-04-02T16:40:37+00:00"
         },
         {
+            "name": "flow/jsonpath",
+            "version": "0.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FlowCommunications/JSONPath.git",
+                "reference": "b9738858c75d008c1211612b973e9510f8b7f8ea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FlowCommunications/JSONPath/zipball/b9738858c75d008c1211612b973e9510f8b7f8ea",
+                "reference": "b9738858c75d008c1211612b973e9510f8b7f8ea",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "peekmo/jsonpath": "dev-master",
+                "phpunit/phpunit": "^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Flow\\JSONPath": "src/",
+                    "Flow\\JSONPath\\Test": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Stephen Frank",
+                    "email": "stephen@flowsa.com"
+                }
+            ],
+            "description": "JSONPath implementation for parsing, searching and flattening arrays",
+            "time": "2019-07-15T17:23:22+00:00"
+        },
+        {
             "name": "friendsofphp/php-cs-fixer",
             "version": "3.0.x-dev",
             "source": {
@@ -6398,6 +6491,42 @@
             ],
             "description": "A tool to automatically fix PHP code style",
             "time": "2020-04-11T13:25:57+00:00"
+        },
+        {
+            "name": "goat1000/svggraph",
+            "version": "3.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/goat1000/SVGGraph.git",
+                "reference": "1bde939609e3391aed921015cc5bf47cbfe103f5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/goat1000/SVGGraph/zipball/1bde939609e3391aed921015cc5bf47cbfe103f5",
+                "reference": "1bde939609e3391aed921015cc5bf47cbfe103f5",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "lib-pcre": "*",
+                "php": ">=5.4.0"
+            },
+            "suggest": {
+                "ext-iconv": "For non-ASCII text measurement support"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Goat1000\\SVGGraph\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0-only"
+            ],
+            "description": "Generates SVG graphs",
+            "homepage": "http://www.goat1000.com/svggraph.php",
+            "time": "2020-03-09T17:27:47+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -7074,6 +7203,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "alxvng/qatracker": 20,
         "friendsofphp/php-cs-fixer": 20
     },
     "prefer-stable": false,
@@ -7083,8 +7213,5 @@
         "ext-pdo_sqlite": "*"
     },
     "platform-dev": [],
-    "platform-overrides": {
-        "php": "7.2.9"
-    },
     "plugin-api-version": "1.1.0"
 }

@@ -38,6 +38,7 @@
         "twig/twig": "^3.0"
     },
     "require-dev": {
+        "alxvng/qatracker": "0.*@dev",
         "dama/doctrine-test-bundle": "^6.2",
         "doctrine/doctrine-fixtures-bundle": "^3.0",
         "friendsofphp/php-cs-fixer": "3.0.x-dev",
@@ -50,9 +51,6 @@
         "symfony/web-profiler-bundle": "5.0.*"
     },
     "config": {
-        "platform": {
-            "php": "7.2.9"
-        },
         "preferred-install": {
             "*": "dist"
         },
