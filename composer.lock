@@ -6014,12 +6014,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/alxvgt/qatracker.git",
-                "reference": "04af9d28250a4883aec1d08396a398b62816cbf7"
+                "reference": "ea191c7a9dd61cdb9a81848ed4240200554f9faf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/alxvgt/qatracker/zipball/04af9d28250a4883aec1d08396a398b62816cbf7",
-                "reference": "04af9d28250a4883aec1d08396a398b62816cbf7",
+                "url": "https://api.github.com/repos/alxvgt/qatracker/zipball/ea191c7a9dd61cdb9a81848ed4240200554f9faf",
+                "reference": "ea191c7a9dd61cdb9a81848ed4240200554f9faf",
                 "shasum": ""
             },
             "require": {
@@ -6046,8 +6046,8 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "App\\": "src/",
-                    "App\\Tests\\": "tests/"
+                    "Alxvng\\QATracker\\": "src/",
+                    "Alxvng\\QATracker\\Tests\\": "tests/"
                 },
                 "files": [
                     "Root.php"
@@ -6058,7 +6058,7 @@
                 "MIT"
             ],
             "description": "QATracker is a tool to collect, store and render quality assurance indicators.",
-            "time": "2020-04-09T06:41:43+00:00"
+            "time": "2020-04-18T14:38:57+00:00"
         },
         {
             "name": "composer/semver",
